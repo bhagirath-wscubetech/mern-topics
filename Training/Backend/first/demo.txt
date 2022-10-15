@@ -1,0 +1,8 @@
+Hello World!!!
+
+// import { readFile } from 'fs';
+
+// fs.readFile("templates/home.html", "utf-8", (err, data) => {
+//     console.log(err)
+//     console.log(data)
+// })

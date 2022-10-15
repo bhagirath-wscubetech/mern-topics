@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="getData()">Get Data</button>
+    <script>
+        function getData() {
+            // const resp = fetch("https://jsonplaceholder.typicode.com/posts")
+            console.log("Function called")
+            fetch("https://jsonplaceholder.typicode.com/posts")
+                // 1st promise
+                .then(
+                    (success) => {
+                        // 2nd promise
+                        success.json()
+                            .then(
+                                (data) => console.log(data)
+                            )
+                            .catch(
+                                (error) => {
+                                    console.log(error)
+                                }
+                            )
+                    }
+                )
+                .catch(
+                    (error) => {
+                        console.log(error)
+                    }
+                )
+            console.log("Function ended")
+        }
+    </script>
+</body>
+
+</html>

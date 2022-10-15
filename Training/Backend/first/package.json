@@ -1,0 +1,17 @@
+{
+    "name": "first",
+    "version": "1.0.0",
+    "description": "",
+    "type": "commonjs",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit ",
+        "start": "nodemon index"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "nodemon": "^2.0.19"
+    }
+}

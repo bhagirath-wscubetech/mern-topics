@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="details.getData()">
+        Click Me
+    </button>
+    <script>
+        // function add(a, b) {
+        //     console.log(a + b)
+        // }
+        // const add = (a, b) => {
+        //     console.log(a + b)
+        // }
+
+        // add(5, 3)
+        // add(7, 5)
+        // add(10, 5)
+
+        const details = {
+                name: "John",
+                age: 24,
+                gender: "M",
+                getData: function() {
+                    // console.log(first)
+                    // console.log(this)
+
+                    setTimeout(
+                        function() {
+                            // console.log(this)
+                            console.log(`The age of ${this.name} is ${this.age}`)
+                        },
+                        3000
+                    )
+                    setTimeout(
+                        () => {
+                            // console.log(this)
+                            console.log(`The age of ${this.name} is ${this.age}`)
+                        },
+                        3000
+                    )
+
+                }
+            }
+            // 3000 ms  -> 3 secs
+    </script>
+</body>
+
+</html>

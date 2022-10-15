@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="setData()">Set</button>
+    <button onclick="getData()">Get</button>
+    <button onclick="removeData()">Remove</button>
+    <button onclick="localStorage.clear()">Clear</button>
+    <script>
+        function setData() {
+            // const name = "Prachi"
+            // localStorage.setItem("name", name)
+            const person = {
+                name: "Prachi",
+                gender: "F",
+                city: "Jodhpur"
+            }
+            localStorage.setItem("details", JSON.stringify(person));
+            // localStorage.setItem("city", "Jodhpur")
+            // localStorage.setItem("gender", "Female")
+
+        }
+
+        function getData() {
+            const details = localStorage.getItem("details")
+            console.log(details.name);
+            console.log(JSON.parse(details).name)
+        }
+
+        function removeData() {
+            localStorage.removeItem("name")
+        }
+    </script>
+</body>
+
+</html>
